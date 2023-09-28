@@ -1,0 +1,21 @@
+\documentclass[]{customcv}
+\usepackage[scale=0.9]{geometry}
+\usepackage{lipsum}
+\title{$title$}
+\firstname{$firstname$}
+\lastname{$lastname$}
+\address{$address.street$}{$address.complement$}{$address.city$}
+\mobile{$mobile$}
+\email{$email$}
+
+
+\begin{document}
+\maketitle
+\begin{content}
+    \cvpart{Experience}{
+        $for(experience)$
+        \cvdatedentry{$experience.years$}{$experience.title$}
+        $endfor$
+    }
+\end{content}
+\end{document}
