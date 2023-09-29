@@ -1,20 +1,48 @@
 \documentclass[]{customcv}
 \usepackage[scale=0.9]{geometry}
 \usepackage{lipsum}
+
+\picture{$picture$}
+
 \title{$title$}
 \firstname{$firstname$}
 \lastname{$lastname$}
 \address{$address.street$}{$address.complement$}{$address.city$}
 \mobile{$mobile$}
 \email{$email$}
+\website{$website$}
+\linkedin{$linkedin$}
+\github{$github$}
 
+\languages{
+    $for(languages)$
+    \cvlangentry{$languages.name$}{$languages.level$}{$languages.comment$}
+    $endfor$
+}
+
+\skills{
+    $for(techskills)$
+    \cvsimpleentry{$techskills.name$}{$techskills.comment$}
+    $endfor$
+}
 
 \begin{document}
+\pagenumbering{gobble}
 \maketitle
 \begin{content}
-    \cvpart{Experience}{
+    \cvpart{Professional Experience}{
         $for(experience)$
-        \cvdatedentry{$experience.years$}{$experience.title$}
+        \cvdatedentry{$experience.years$}{$experience.title$}{$experience.employer$}{$experience.location$}{$experience.description$}
+        $endfor$
+    }
+    \cvpart{Education}{
+        $for(education)$
+        \cvdatedentry{$education.years$}{$education.title$}{$education.organization$}{$education.location$}{$education.description$}
+        $endfor$
+    }
+    \cvpart{Non-profit}{
+        $for(volunteering)$
+        \cvdatedentry{$volunteering.years$}{$volunteering.title$}{$volunteering.organization$}{$volunteering.location$}{$volunteering.description$}
         $endfor$
     }
 \end{content}
