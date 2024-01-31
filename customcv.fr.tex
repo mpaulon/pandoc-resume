@@ -1,4 +1,4 @@
-\documentclass[]{customcv}
+\documentclass[]{customcvfr}
 \usepackage[scale=0.9]{geometry}
 \usepackage{lipsum}
 
@@ -31,21 +31,21 @@
 \maketitle
 \begin{content}
     $if(experience)$
-    \cvpart{Professional Experience}{
+    \cvpart{Expérience Professionnelle}{
         $for(experience)$
         \cvdatedentry{$experience.years$}{$experience.title$}{$experience.employer$}{$experience.location$}{$experience.description$}
         $endfor$
     }
     $endif$
     $if(education)$
-    \cvpart{Education}{
+    \cvpart{Formation}{
         $for(education)$
         \cvdatedentry{$education.years$}{$education.title$}{$education.organization$}{$education.location$}{$education.description$}
         $endfor$
     }
     $endif$
     $if(volunteering)$
-    \cvpart{Non-profit}{
+    \cvpart{Associatif}{
         $for(volunteering)$
         \cvdatedentry{$volunteering.years$}{$volunteering.title$}{$volunteering.organization$}{$volunteering.location$}{$volunteering.description$}
         $endfor$

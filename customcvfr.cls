@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{customcv}[2023/09/27 Custom CV Latex Class]
+\ProvidesClass{customcvfr}[2023/09/27 Custom CV Latex Class]
 
 \renewcommand\normalsize{\fontsize{10pt}{12pt}\selectfont}
 
@@ -76,7 +76,7 @@
         \end{center}
     \end{minipage}
 
-    \begin{@leftsection}{Address}{\emoji{envelope}}
+    \begin{@leftsection}{Adresse}{\emoji{envelope}}
         \@addressStreet\\
         \ifx\@addressComplement\empty\else\@addressComplement\\\fi
         \@addressCity
@@ -87,17 +87,17 @@
         \emoji{email} \@email
     \end{@leftsection}
 
-    \begin{@leftsection}{Links}{\emoji{link}}
+    \begin{@leftsection}{Liens}{\emoji{link}}
         \ifnotempty{\@website}
         \ifnotempty{\@linkedin}
         \ifnotempty{\@github}
     \end{@leftsection}
 
-    \begin{@leftsection}{Languages}{\emoji{world-map}}
+    \begin{@leftsection}{Langues}{\emoji{world-map}}
         \@languages
     \end{@leftsection}
 
-    \begin{@leftsection}{Skills}{\emoji{scroll}}
+    \begin{@leftsection}{Compétences}{\emoji{scroll}}
         \@skills
     \end{@leftsection}
 }
@@ -170,7 +170,7 @@
 }
 
 \newcommand{\cvsimpleentry}[2]{
-\parbox[t]{3mm}{\textbullet}{\textbf{#1:}} \\
+\parbox[t]{3mm}{\textbullet}{\textbf{#1 :}} \\
 {\small #2} \\
 }
 

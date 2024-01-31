@@ -7,8 +7,8 @@ address:
     complement: Apt. 303
     city: 94230 CACHAN
 mobile: +33 6 52 61 86 18
-email: mic.paulon@gmail.com
-
+# email: mic.paulon@gmail.com
+email: paulon@crans.org
 # picture: dummy-profile-pic.jpg
 
 # website: https://michael.paulon.org
